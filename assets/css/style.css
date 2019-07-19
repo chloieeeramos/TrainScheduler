@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/train.jpg");
+    background-size: cover;
+    opacity: 0.9;
+}
+.jumbotron {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1 {
+    font-family: "Amaranth";
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+h5 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    color: white;
+}
+
+tr {
+    color: white;
+}
