@@ -62,3 +62,50 @@ database.ref("/trains").on("child_added", function(snapshot) {
             console.log(trainRef);
         });
     });
+
+    var storeInputs = function(event) {
+        event.preventDefault();
+        trainName = elTrain.val().trim();
+  
+    trainDestination = elTrainDestination.val().trim();
+    trainTime = moment(elTrainTime.val().trim(), "HH:mm").subtract(1, "years").format("X");
+    trainFrequency = elTimeFreq.val().trim();
+
+    database.ref("/trains").push({
+        name: trainName,
+        destination: trainDestination,
+        time: trainTime,
+        frequency: trainFrequency,
+        nextArrival: nextArrival,
+        minutesAway: minutesAway,
+        date_added: firebase.database.ServerValue.TIMESTAMP
+    });
+
+    alert("Train successuflly added!");
+
+    elTrain.val("");
+    elTrainDestination.val("");
+    elTrainTime.val("");
+    elTimeFreq.val("");
+};
+
+$("#btn-add").on("click", function(event) {
+   
+    if (elTrain.val().length === 0 || elTrainDestination.val().length === 0 || elTrainTime.val().length === 0 || elTimeFreq === 0) {
+        alert("Please Fill All Required Fields");
+    } else {
+         storeInputs(event);
+    }
+});
+
+$('form').on("keypress", function(event) {
+    if (event.which === 13) {
+        if (elTrain.val().length === 0 || elTrainDestination.val().length === 0 || elTrainTime.val().length === 0 || elTimeFreq === 0) {
+            alert("Please Fill All Required Fields");
+        } else {
+            storeInputs(event);
+        }
+    }
+});
+
+    
