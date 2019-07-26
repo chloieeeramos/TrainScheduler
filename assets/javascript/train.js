@@ -11,13 +11,14 @@ var elTrainTime = $("#train-time").mask("00:00");
 var elTimeFreq = $("#time-freq").mask("00");
 
 var config = {
-    apiKey: "AIzaSyDRc8WHqEiPmt5eZgB_HxRygGA31dqHKPg",
-    authDomain: "train-schedule-bd950.firebaseapp.com",
-    databaseURL: "https://train-schedule-bd950.firebaseio.com",
-    projectId: "train-schedule-bd950",
-    storageBucket: "train-schedule-bd950.appspot.com",
-    messagingSenderId: "236709814864"
-};
+    apiKey: "AIzaSyD7iuOq8PZNuMFKdXWfxoqcPx4F760OEWY",
+    authDomain: "database-f24e5.firebaseapp.com",
+    databaseURL: "https://database-f24e5.firebaseio.com",
+    projectId: "database-f24e5",
+    storageBucket: "database-f24e5.appspot.com",
+    messagingSenderId: "932238874107",
+    appId: "1:932238874107:web:d1abb469c581ed1d"
+  };
 
 firebase.initializeApp(config);
 
